@@ -3,785 +3,844 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AVARIO - Conseil en marketing digital pour TPE/PME. SEO, réseaux sociaux, Google Ads, création de contenus. Seine-Maritime & Île-de-France.">
-    <meta name="keywords" content="marketing digital, SEO, réseaux sociaux, Google Ads, Rouen, Paris, TPE, PME">
-    <meta name="author" content="Iann Bolatoglu - AVARIO">
-    <title>AVARIO - La stratégie digitale au service de votre croissance</title>
-    <link rel="icon" type="image/png" href="logo-avario.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="AVARIO - Agence de marketing digital et stratégie commerciale pour TPE/PME. Conseil en SEO local, e-réputation, contenus digitaux. SIREN 100 792 142">
+    <meta name="keywords" content="marketing digital, SEO local, e-réputation, stratégie commerciale, agence digitale, Rouen, Normandie, Seine-Maritime, Île-de-France">
+    <meta name="author" content="Iann Bolatoğlu - AVARIO">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AVARIO - Marketing Digital & Stratégie Commerciale">
+    <meta property="og:description" content="Conseil en stratégie marketing, développement de visibilité numérique et optimisation de performance commerciale">
+    <meta property="og:image" content="https://www.genspark.ai/api/files/s/aUbPaLxT">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AVARIO - Marketing Digital">
+    <meta name="twitter:description" content="Agence de marketing digital spécialisée en SEO local et e-réputation">
+    
+    <title>AVARIO - Agence Marketing Digital | Stratégie & Performance Commerciale</title>
+    
+    <link rel="icon" type="image/png" href="https://www.genspark.ai/api/files/s/aUbPaLxT">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #0066FF;
+            --primary-purple: #6B4FBB;
+            --primary-orange: #FF6B35;
+            --dark-bg: #0A0E27;
+            --light-bg: #F8F9FA;
+            --text-dark: #1A1A1A;
+            --text-light: #F8F9FA;
+            --gray-medium: #6B7280;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--light-bg);
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1f3a 100%);
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--gray-medium);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .primary-btn {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+        
+        .secondary-btn {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .secondary-btn:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray-medium);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-blue);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .service-card p {
+            color: var(--gray-medium);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            color: var(--gray-medium);
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-top: 1.5rem;
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: var(--gray-medium);
+            font-weight: 400;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 2rem;
+            background: var(--dark-bg);
+            color: var(--text-light);
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-medium);
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray-medium);
+            margin-top: 0.5rem;
+        }
+        
+        .legal-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .legal-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        
+        .legal-info p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-info strong {
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+        }
+        
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item p {
+            color: var(--gray-medium);
+        }
+        
+        .contact-item a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--gray-medium);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .footer-legal {
+            font-size: 0.9rem;
+            color: var(--gray-medium);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-container,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#hero" class="logo"><img src="logo-avario.png" alt="AVARIO" style="height: 40px; vertical-align: middle; margin-right: 10px;"> AVARIO</a>
-                <button class="menu-toggle" id="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#about" class="nav-link">À propos</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#offers" class="nav-link">Offres</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contact" class="btn-primary">Contact</a></li>
-                </ul>
-            </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AVARIO</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Démarrer</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <img src="logo-avario.png" alt="Logo AVARIO" style="width: 120px; height: 120px; margin-bottom: 20px; border-radius: 20px;">
-                <h1 class="hero-title">AVARIO</h1>
-                <p class="hero-subtitle">La stratégie digitale au service de votre croissance</p>
-                <p class="hero-description">
-                    J'accompagne TPE, PME et entrepreneurs à booster leur visibilité en ligne 
-                    et générer des résultats mesurables
-                </p>
-                <div class="hero-contact">
-                    <p>📍 Seine-Maritime & Île-de-France</p>
-                    <p>📧 <a href="mailto:bolatoglu.iann.pro@gmail.com">bolatoglu.iann.pro@gmail.com</a></p>
-                    <p>📱 <a href="tel:+33767725980">07 67 72 59 80</a></p>
-                </div>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary btn-large">Parlons de votre projet</a>
-                    <a href="#about" class="btn-secondary btn-large">En savoir plus</a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Qui suis-je ?</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-intro">
-                    <p class="lead">
-                        Bonjour ! Je m'appelle <strong>Iann Bolatoglu</strong>, fondateur d'<strong>AVARIO</strong>.
-                    </p>
-                    <p>
-                        Actuellement en 2ème année de <strong>BTS Communication</strong> avec une spécialisation en entrepreneuriat, 
-                        j'ai développé mon expertise terrain à travers deux expériences enrichissantes :
-                    </p>
-                </div>
-
-                <div class="experience-grid">
-                    <div class="experience-card">
-                        <div class="experience-icon">📊</div>
-                        <h3>Alternant Communication Digitale</h3>
-                        <p class="experience-company">Épicerie Sabah - Paris 12e</p>
-                        <p class="experience-period">Septembre 2025 - Août 2026</p>
-                        <ul class="experience-list">
-                            <li>Gestion et analyse des données marketing (data-driven decisions)</li>
-                            <li>Création et automatisation de newsletters (CRM, email marketing)</li>
-                            <li>Optimisation des workflows digitaux et automatisations</li>
-                        </ul>
-                        <p class="experience-impact">
-                            <strong>Impact :</strong> Pilotage des KPIs, amélioration du taux d'ouverture des newsletters, 
-                            automatisation de processus marketing
-                        </p>
-                    </div>
-
-                    <div class="experience-card">
-                        <div class="experience-icon">📸</div>
-                        <h3>Service Civique Communication</h3>
-                        <p class="experience-company">Camps Gyms de Normandie</p>
-                        <p class="experience-period">Mars 2025 - Novembre 2025</p>
-                        <ul class="experience-list">
-                            <li>Gestion complète des réseaux sociaux (Instagram, Facebook, TikTok)</li>
-                            <li>Création de contenus visuels et vidéos (shooting photo/vidéo)</li>
-                            <li>Stratégie éditoriale et calendrier de contenus</li>
-                        </ul>
-                        <p class="experience-impact">
-                            <strong>Impact :</strong> Augmentation de l'engagement, production de +100 contenus, 
-                            couverture événementielle
-                        </p>
-                    </div>
-                </div>
-
-                <div class="mission-box">
-                    <h3>🎯 Ma mission avec AVARIO</h3>
-                    <p>
-                        Rendre le marketing digital <strong>accessible, mesurable et rentable</strong> 
-                        pour les structures qui veulent croître sans exploser leur budget.
-                    </p>
-                    <p><strong>Ma méthode :</strong> Audit → Stratégie → Exécution → Mesure → Optimisation</p>
-                </div>
-
-                <div class="value-proposition">
-                    <h3>💡 Ma valeur ajoutée</h3>
-                    <div class="value-grid">
-                        <div class="value-item">
-                            <i class="fas fa-brain"></i>
-                            <h4>Double compétence</h4>
-                            <p><strong>Créativité</strong> (contenu, storytelling) + <strong>Data</strong> (analytics, automatisation)</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-chart-line"></i>
-                            <h4>Orienté ROI</h4>
-                            <p>Chaque action doit générer des résultats mesurables</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-handshake"></i>
-                            <h4>Accompagnement sur-mesure</h4>
-                            <p>Adapté à vos objectifs et votre budget</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="hero">
+        <h1>Marketing Digital & <span class="gradient-text">Stratégie Commerciale</span></h1>
+        <p>Conseil en stratégie marketing, développement de visibilité numérique et optimisation de performance commerciale pour TPE/PME</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="primary-btn">Audit Gratuit 30 min</a>
+            <a href="#services" class="secondary-btn">Découvrir nos services</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ce que je fais pour vous</h2>
-                <p class="section-subtitle">Des solutions digitales complètes pour booster votre croissance</p>
+    <section id="services" class="services">
+        <h2 class="section-title">Nos <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">Des solutions concrètes pour booster votre présence digitale et vos ventes</p>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Pack Visibilité Locale</h3>
+                <p>Devenez visible sur Google et captez vos clients locaux</p>
+                <ul>
+                    <li>Google My Business optimisé</li>
+                    <li>SEO local (mots-clés géolocalisés)</li>
+                    <li>Campagne avis clients</li>
+                    <li>Posts GMB automatisés</li>
+                </ul>
+                <div class="price">250€<span class="price-period">/mois</span></div>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Référencement & Visibilité (SEO/SEA)</h3>
-                    <p class="service-tagline">Soyez trouvé par vos clients au moment où ils vous cherchent</p>
-                    <ul class="service-features">
-                        <li>✅ Audit SEO complet (technique, contenu, backlinks)</li>
-                        <li>✅ Optimisation Google My Business (SEO local)</li>
-                        <li>✅ Campagnes Google Ads ciblées et optimisées</li>
-                        <li>✅ Suivi des positions et reporting mensuel</li>
-                    </ul>
-                    <p class="service-price">À partir de <strong>250€/mois</strong></p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Gestion des Réseaux Sociaux</h3>
-                    <p class="service-tagline">Créez une communauté engagée et convertissez votre audience</p>
-                    <ul class="service-features">
-                        <li>✅ Stratégie éditoriale personnalisée (Instagram, Facebook, LinkedIn, TikTok)</li>
-                        <li>✅ Création de contenus visuels et vidéos (posts, stories, reels)</li>
-                        <li>✅ Programmation et planification (Meta Business Suite, Buffer)</li>
-                        <li>✅ Community management : modération et interaction</li>
-                    </ul>
-                    <p class="service-price">À partir de <strong>400€/mois</strong></p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Data & Automatisation Marketing</h3>
-                    <p class="service-tagline">Prenez des décisions basées sur les données, pas l'intuition</p>
-                    <ul class="service-features">
-                        <li>✅ Configuration des outils analytics (Google Analytics 4, Meta Pixel)</li>
-                        <li>✅ Création de dashboards de suivi (KPIs personnalisés)</li>
-                        <li>✅ Automatisation d'emails et newsletters (CRM, workflows)</li>
-                        <li>✅ A/B testing et optimisation continue</li>
-                    </ul>
-                    <p class="service-price"><strong>Sur devis</strong></p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Création de Contenus</h3>
-                    <p class="service-tagline">Des visuels et vidéos qui captivent et font passer à l'action</p>
-                    <ul class="service-features">
-                        <li>✅ Shooting photo et vidéo (produits, événements, portraits)</li>
-                        <li>✅ Montage vidéo (Reels, TikTok, YouTube Shorts)</li>
-                        <li>✅ Design graphique (posts, stories, visuels publicitaires)</li>
-                        <li>✅ Rédaction de contenus optimisés SEO</li>
-                    </ul>
-                    <p class="service-price">À partir de <strong>150€/mission</strong></p>
-                </div>
+            <!-- Service 2 -->
+            <div class="service-card" style="border-color: var(--primary-orange);">
+                <div class="service-icon">📱</div>
+                <h3>Pack Acquisition Digitale</h3>
+                <p>Générez des leads qualifiés via les réseaux sociaux</p>
+                <ul>
+                    <li>Stratégie Instagram + TikTok</li>
+                    <li>Reels et contenus viraux</li>
+                    <li>Calendrier éditorial mensuel</li>
+                    <li>Shooting photo/vidéo pro</li>
+                </ul>
+                <div class="price">400€<span class="price-period">/mois</span></div>
+                <span style="display: inline-block; background: var(--primary-orange); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-top: 1rem;">⭐ RECOMMANDÉ</span>
             </div>
 
-            <div class="cta-box">
-                <h3>🎁 Offre de lancement</h3>
-                <p>
-                    <strong>Audit gratuit</strong> de votre présence digitale avec bilan complet (valeur 150€)
-                </p>
-                <a href="tel:+33767725980" class="btn-primary">Contactez-moi : 07 67 72 59 80</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offers Section -->
-    <section id="offers" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes offres packagées</h2>
-                <p class="section-subtitle">Des solutions clés en main adaptées à vos besoins</p>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Pack Lancement Digital</h3>
+                <p>Créez une présence en ligne professionnelle et performante</p>
+                <ul>
+                    <li>Refonte UX/UI site web</li>
+                    <li>Setup newsletter automatisée</li>
+                    <li>3 workflows email marketing</li>
+                    <li>Formation 2h (prise en main)</li>
+                </ul>
+                <div class="price">700€<span class="price-period">ponctuel</span></div>
             </div>
 
-            <div class="offers-grid">
-                <div class="offer-card">
-                    <div class="offer-badge">Pack 1</div>
-                    <h3>🎯 Visibilité Locale</h3>
-                    <p class="offer-description">Pour les commerces et artisans qui veulent être trouvés sur Google</p>
-                    <div class="offer-price">
-                        <span class="price-amount">250€</span>
-                        <span class="price-period">/mois</span>
-                    </div>
-                    <p class="offer-commitment">Sans engagement</p>
-                    
-                    <h4>✨ Inclus :</h4>
-                    <ul class="offer-features">
-                        <li>✅ Optimisation complète de votre fiche Google My Business</li>
-                        <li>✅ Création de 4 posts Google My Business/mois (actualités, offres, événements)</li>
-                        <li>✅ Gestion des avis clients (réponses personnalisées)</li>
-                        <li>✅ Suivi mensuel du positionnement local (mots-clés + zone géo)</li>
-                        <li>✅ 1 call de suivi stratégique/mois (30 min)</li>
-                    </ul>
-                    
-                    <h4>📊 Résultats attendus :</h4>
-                    <ul class="offer-results">
-                        <li>→ +50% de visibilité locale en 3 mois</li>
-                        <li>→ Apparition dans le "Pack Local" Google Maps</li>
-                        <li>→ Amélioration de la note moyenne des avis</li>
-                    </ul>
-                    
-                    <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-primary btn-block">Choisir cette offre</a>
-                </div>
-
-                <div class="offer-card featured">
-                    <div class="offer-badge popular">Populaire</div>
-                    <h3>🚀 Acquisition Digitale</h3>
-                    <p class="offer-description">Pour les TPE/PME qui veulent générer des leads qualifiés en ligne</p>
-                    <div class="offer-price">
-                        <span class="price-amount">400€</span>
-                        <span class="price-period">/mois</span>
-                    </div>
-                    <p class="offer-commitment">Engagement 3 mois recommandé</p>
-                    
-                    <h4>✨ Inclus :</h4>
-                    <ul class="offer-features">
-                        <li>✅ Gestion d'1 campagne publicitaire (Google Ads OU Meta Ads)</li>
-                        <li>✅ Création de 8 visuels publicitaires/mois (A/B testing)</li>
-                        <li>✅ Configuration du tracking avancé (conversions, événements)</li>
-                        <li>✅ Optimisation hebdomadaire des campagnes (CPC, CTR, CPA)</li>
-                        <li>✅ Reporting mensuel détaillé (ROI, coût par lead, recommandations)</li>
-                    </ul>
-                    
-                    <h4>📊 Résultats attendus :</h4>
-                    <ul class="offer-results">
-                        <li>→ Baisse du coût par lead de 30% en 2 mois</li>
-                        <li>→ ROI positif dès le 2e mois (objectif : 3€ générés pour 1€ dépensé)</li>
-                        <li>→ Lead scoring et qualification</li>
-                    </ul>
-                    
-                    <p class="offer-bonus">💡 <strong>Bonus inclus :</strong> Setup Google Analytics 4 + Meta Pixel (valeur 200€)</p>
-                    
-                    <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-primary btn-block">Choisir cette offre</a>
-                </div>
-
-                <div class="offer-card">
-                    <div class="offer-badge">Pack 3</div>
-                    <h3>🎁 Lancement Digital</h3>
-                    <p class="offer-description">Pour les nouvelles structures qui partent de zéro</p>
-                    <div class="offer-price">
-                        <span class="price-amount">700€</span>
-                        <span class="price-period">ponctuel</span>
-                    </div>
-                    <p class="offer-commitment">Livré en 2 semaines</p>
-                    
-                    <h4>✨ Inclus :</h4>
-                    <ul class="offer-features">
-                        <li>✅ Audit complet de votre marché et concurrence (benchmark)</li>
-                        <li>✅ Définition de votre positionnement et identité de marque</li>
-                        <li>✅ Création de tous vos comptes professionnels (GMB, Instagram, Facebook, LinkedIn)</li>
-                        <li>✅ Charte éditoriale + ligne graphique de base (couleurs, typos, templates Canva)</li>
-                        <li>✅ Calendrier éditorial 1 mois (30 idées de posts)</li>
-                        <li>✅ Formation de 2h pour gérer vos outils en autonomie (enregistrée)</li>
-                    </ul>
-                    
-                    <h4>📊 Livrables :</h4>
-                    <ul class="offer-results">
-                        <li>→ Document stratégique complet (20-30 pages)</li>
-                        <li>→ Tous les comptes activés et optimisés</li>
-                        <li>→ Templates Canva personnalisés (pack de 10 modèles)</li>
-                    </ul>
-                    
-                    <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-primary btn-block">Choisir cette offre</a>
-                </div>
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Audit Digital Stratégique</h3>
+                <p>Identifiez vos opportunités de croissance cachées</p>
+                <ul>
+                    <li>Audit SEO/UX/Social complet</li>
+                    <li>Analyse concurrentielle</li>
+                    <li>Plan d'action 90 jours priorisé</li>
+                    <li>Projection ROI chiffrée</li>
+                </ul>
+                <div class="price">350€<span class="price-period">ponctuel</span></div>
             </div>
 
-            <div class="custom-offer">
-                <h3>💡 Besoin d'un accompagnement sur-mesure ?</h3>
-                <p>Chaque projet est unique. Je construis des solutions adaptées à vos objectifs, votre secteur et votre budget.</p>
-                <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-secondary">Demander un devis personnalisé</a>
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Gestion E-Réputation</h3>
+                <p>Transformez vos avis en machine de conversion</p>
+                <ul>
+                    <li>Campagne avis automatisée</li>
+                    <li>Réponse à 100% des avis</li>
+                    <li>Workflow post-achat</li>
+                    <li>Objectif: 4.7★ en 90 jours</li>
+                </ul>
+                <div class="price">300€<span class="price-period">/mois</span></div>
             </div>
 
-            <div class="services-alacarte">
-                <h3>🛠️ Services à la carte</h3>
-                <div class="alacarte-grid">
-                    <div class="alacarte-item">
-                        <h4>🔍 Audit SEO Complet</h4>
-                        <p>Rapport de 15-20 pages avec plan d'action priorisé</p>
-                        <p class="alacarte-price"><strong>150€</strong></p>
-                        <p class="alacarte-delivery">⏱️ Délai : 5 jours ouvrés</p>
-                    </div>
-                    <div class="alacarte-item">
-                        <h4>🎯 Setup Google Ads</h4>
-                        <p>Configuration complète + 10 annonces + tracking + formation</p>
-                        <p class="alacarte-price"><strong>300€</strong></p>
-                        <p class="alacarte-delivery">⏱️ Délai : 7 jours ouvrés</p>
-                    </div>
-                    <div class="alacarte-item">
-                        <h4>📸 Shooting Photo/Vidéo</h4>
-                        <p>Sur site + retouches + montage + 20-50 contenus livrés</p>
-                        <p class="alacarte-price">À partir de <strong>200€</strong>/demi-journée</p>
-                        <p class="alacarte-delivery">⏱️ Délai : 10 jours après shooting</p>
-                    </div>
-                    <div class="alacarte-item">
-                        <h4>📧 Setup Newsletter</h4>
-                        <p>Outil + 3 templates + 2 workflows automatisés + formation</p>
-                        <p class="alacarte-price">À partir de <strong>400€</strong></p>
-                        <p class="alacarte-delivery">⏱️ Délai : 10 jours ouvrés</p>
-                    </div>
-                </div>
+            <!-- Service 6 -->
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Formation Sur-Mesure</h3>
+                <p>Devenez autonome sur vos outils marketing</p>
+                <ul>
+                    <li>SEO local & GMB</li>
+                    <li>Création contenus courts (Reels/TikTok)</li>
+                    <li>Email marketing & automation</li>
+                    <li>Support de formation fourni</li>
+                </ul>
+                <div class="price">150€<span class="price-period">/heure</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ils m'ont fait confiance</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">🥖</div>
-                    <h3>Épicerie Sabah</h3>
-                    <p class="testimonial-type">Commerce alimentaire bio - Paris 12e</p>
-                    <p class="testimonial-quote">
-                        "Alternance depuis septembre 2025 - Gestion data, newsletters, automatisations"
-                    </p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">🏃</div>
-                    <h3>Camps Gyms de Normandie</h3>
-                    <p class="testimonial-type">Association sportive - Normandie</p>
-                    <p class="testimonial-quote">
-                        "Service Civique mars-novembre 2025 - Réseaux sociaux, création de contenus, shooting"
-                    </p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">🍴</div>
-                    <h3>Restaurants & Food</h3>
-                    <p class="testimonial-type">Plusieurs établissements locaux</p>
-                    <p class="testimonial-quote">
-                        "Optimisation Google My Business, gestion réseaux sociaux"
-                    </p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">🛠️</div>
-                    <h3>Artisans & Commerces</h3>
-                    <p class="testimonial-type">Seine-Maritime & Île-de-France</p>
-                    <p class="testimonial-quote">
-                        "Lancement digital, visibilité locale, campagnes publicitaires"
-                    </p>
-                </div>
-            </div>
-
-            <div class="cta-testimonial">
-                <h3>🚀 Vous voulez rejoindre mes clients satisfaits ?</h3>
-                <p>Demandez votre audit gratuit et découvrez comment booster votre présence digitale.</p>
-                <div class="cta-buttons">
-                    <a href="tel:+33767725980" class="btn-primary">07 67 72 59 80</a>
-                    <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-secondary">bolatoglu.iann.pro@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Target Audience Section -->
-    <section id="target" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pour qui ?</h2>
-                <p class="section-subtitle">AVARIO accompagne des profils variés avec une approche sur-mesure</p>
-            </div>
-
-            <div class="target-grid">
-                <div class="target-card">
-                    <div class="target-icon">🍽️</div>
-                    <h3>Restaurants & Food</h3>
-                    <p>Boulangeries, food trucks, épiceries fines, restaurants indépendants</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Visibilité locale, avis Google, réservations en ligne</p>
-                </div>
-
-                <div class="target-card">
-                    <div class="target-icon">🏪</div>
-                    <h3>Commerces de Proximité</h3>
-                    <p>Boutiques, coiffeurs, instituts beauté, fleuristes</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Trafic en magasin, fidélisation, présence réseaux sociaux</p>
-                </div>
-
-                <div class="target-card">
-                    <div class="target-icon">🔧</div>
-                    <h3>Artisans & Services</h3>
-                    <p>Plombiers, électriciens, peintres, jardiniers</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Génération de leads, crédibilité en ligne, avis clients</p>
-                </div>
-
-                <div class="target-card">
-                    <div class="target-icon">💪</div>
-                    <h3>Coachs & Consultants</h3>
-                    <p>Coachs sportifs, consultants, formateurs, thérapeutes</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Personal branding, prise de RDV en ligne, contenu de valeur</p>
-                </div>
-
-                <div class="target-card">
-                    <div class="target-icon">🚀</div>
-                    <h3>Startups & Entrepreneurs</h3>
-                    <p>Projets en phase de lancement, innovation</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Lancement digital complet, croissance rapide, ROI</p>
-                </div>
-
-                <div class="target-card">
-                    <div class="target-icon">🎥</div>
-                    <h3>Influenceurs & Conciergerie</h3>
-                    <p>Créateurs de contenu, services haut de gamme</p>
-                    <p class="target-need"><strong>Besoin principal :</strong> Stratégie de monétisation, partenariats, audience qualifiée</p>
-                </div>
-            </div>
-
-            <div class="target-cta">
-                <p>🤔 <strong>Vous ne vous reconnaissez dans aucune catégorie ?</strong></p>
-                <p>Pas de problème ! Contactez-moi et discutons de votre projet : <a href="tel:+33767725980">07 67 72 59 80</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Conseils & Ressources Gratuites</h2>
-                <p class="section-subtitle">Des articles pratiques pour booster votre marketing digital dès aujourd'hui</p>
-            </div>
-
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-placeholder">🔍</div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>À Propos <span class="gradient-text">d'AVARIO</span></h2>
+                <p>AVARIO est une agence de marketing digital spécialisée dans l'accompagnement des TPE et PME. Notre mission : rendre le marketing digital accessible, mesurable et rentable.</p>
+                
+                <p>Dirigée par <strong>Iann Bolatoğlu</strong>, alternant en marketing digital (BTS Communication, ESARC Bois-Guillaume), AVARIO combine expertise académique et expérience terrain pour offrir des solutions pragmatiques et performantes.</p>
+                
+                <p>Nous intervenons principalement en <strong>Seine-Maritime et Île-de-France</strong>, avec une expertise particulière sur le marché rouennais et parisien.</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">+180%</div>
+                        <div class="stat-label">CA moyen en 12 mois</div>
                     </div>
-                    <div class="blog-content">
-                        <h3>5 erreurs SEO qui empêchent votre site d'être trouvé sur Google</h3>
-                        <p class="blog-excerpt">
-                            Les erreurs les plus courantes que font les TPE en SEO local et comment les corriger en moins d'une heure.
-                        </p>
-                        <ul class="blog-topics">
-                            <li>• Erreur #1 : Négliger Google My Business</li>
-                            <li>• Erreur #2 : Ne pas optimiser pour le mobile</li>
-                            <li>• Erreur #3 : Ignorer les avis clients</li>
-                            <li>• Erreur #4 : Contenu dupliqué ou trop court</li>
-                            <li>• Erreur #5 : Oublier les balises title et meta description</li>
-                        </ul>
-                        <a href="mailto:bolatoglu.iann.pro@gmail.com?subject=Article SEO" class="blog-cta">
-                            Demander l'article complet →
-                        </a>
+                    <div class="stat">
+                        <div class="stat-number">2.1:1</div>
+                        <div class="stat-label">ROI moyen clients</div>
                     </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-placeholder">📱</div>
+                    <div class="stat">
+                        <div class="stat-number">30j</div>
+                        <div class="stat-label">Premiers résultats visibles</div>
                     </div>
-                    <div class="blog-content">
-                        <h3>Comment créer du contenu qui engage sur Instagram (guide 2026)</h3>
-                        <p class="blog-excerpt">
-                            La méthode pour passer de 0 à 1000 abonnés qualifiés en 3 mois, même avec un petit budget.
-                        </p>
-                        <ul class="blog-topics">
-                            <li>• Les formats qui cartonnent en 2026 (Reels, Carrousels, Stories)</li>
-                            <li>• La règle des 3 secondes pour capter l'attention</li>
-                            <li>• Comment écrire des légendes qui font réagir</li>
-                            <li>• Les meilleurs horaires de publication par secteur</li>
-                            <li>• Analyse de 5 comptes inspirants</li>
-                        </ul>
-                        <a href="mailto:bolatoglu.iann.pro@gmail.com?subject=Article Instagram" class="blog-cta">
-                            Demander l'article complet →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-placeholder">🎯</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Google Ads pour les débutants : lancer sa première campagne rentable</h3>
-                        <p class="blog-excerpt">
-                            Le guide pas-à-pas pour créer une campagne Google Ads qui génère des leads sans gaspiller votre budget.
-                        </p>
-                        <ul class="blog-topics">
-                            <li>• Définir son budget et ses objectifs</li>
-                            <li>• Trouver les bons mots-clés (outils gratuits)</li>
-                            <li>• Rédiger des annonces qui convertissent</li>
-                            <li>• Configurer le tracking des conversions</li>
-                            <li>• Optimiser ses campagnes semaine après semaine</li>
-                        </ul>
-                        <a href="mailto:bolatoglu.iann.pro@gmail.com?subject=Article Google Ads" class="blog-cta">
-                            Demander l'article complet →
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-newsletter">
-                <h3>📥 Recevez mes prochains articles par email</h3>
-                <p>Inscrivez-vous à ma newsletter (1 email/mois max, zéro spam)</p>
-                <a href="mailto:bolatoglu.iann.pro@gmail.com?subject=Inscription newsletter" class="btn-primary">
-                    S'inscrire à la newsletter
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Questions fréquentes</h2>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h3 class="faq-question">🤔 Pourquoi choisir AVARIO plutôt qu'une agence traditionnelle ?</h3>
-                    <div class="faq-answer">
-                        <p><strong>3 raisons principales :</strong></p>
-                        <ul>
-                            <li>✅ <strong>Tarifs accessibles</strong> : En tant que freelance, je n'ai pas les coûts d'une agence (bureaux, équipe commerciale, etc.). Vous payez pour l'expertise, pas pour la structure.</li>
-                            <li>✅ <strong>Relation directe</strong> : Vous travaillez directement avec moi, pas avec un chargé de compte qui transmet à un exécutant. Réactivité et personnalisation garanties.</li>
-                            <li>✅ <strong>Double compétence rare</strong> : Je maîtrise à la fois la création (contenu, design) ET la data (analytics, automatisation). Stratégie créative + résultats mesurables.</li>
-                        </ul>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Clients satisfaits</div>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">⏱️ Combien de temps avant de voir des résultats ?</h3>
-                    <div class="faq-answer">
-                        <p><strong>Ça dépend du service :</strong></p>
-                        <ul>
-                            <li><strong>SEO local</strong> : Premiers résultats en 2-4 semaines (Google My Business), résultats significatifs en 2-3 mois</li>
-                            <li><strong>Google Ads</strong> : Leads dès la 1ère semaine, optimisation du ROI en 1-2 mois</li>
-                            <li><strong>Réseaux sociaux</strong> : Engagement visible dès le 1er mois, croissance d'audience en 3-6 mois</li>
-                            <li><strong>Lancement digital</strong> : Livrables finalisés en 2 semaines, impact mesurable dès le 1er mois</li>
-                        </ul>
-                        <p><strong>Ma promesse :</strong> Transparence totale. Je vous dis exactement ce qui est réaliste selon votre budget et votre secteur.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">💰 Comment se passent les paiements ?</h3>
-                    <div class="faq-answer">
-                        <p><strong>Simple et sécurisé :</strong></p>
-                        <ul>
-                            <li><strong>Packs mensuels</strong> (250€, 400€) : Prélèvement le 1er de chaque mois, sans engagement (résiliable à tout moment avec 30 jours de préavis)</li>
-                            <li><strong>Missions ponctuelles</strong> (700€, audits, setup) : 50% à la commande, 50% à la livraison</li>
-                            <li><strong>Moyens de paiement</strong> : Virement bancaire uniquement</li>
-                        </ul>
-                        <p><strong>Facture conforme</strong> émise systématiquement (micro-entreprise, TVA non applicable).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">🌍 Travaillez-vous uniquement en présentiel ?</h3>
-                    <div class="faq-answer">
-                        <p><strong>Non, je m'adapte à vos préférences :</strong></p>
-                        <ul>
-                            <li><strong>100% distanciel</strong> : Pour les clients Île-de-France éloignés ou préférant le remote (visio, email, téléphone)</li>
-                            <li><strong>Hybride</strong> : Kick-off en présentiel + suivi en distanciel (formule la plus courante)</li>
-                            <li><strong>Présentiel régulier</strong> : Possible pour les clients Seine-Maritime (Rouen, Le Havre, etc.)</li>
-                        </ul>
-                        <p><strong>Outils utilisés :</strong> Google Meet, Email, Téléphone, Google Drive (partage de documents)</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">📞 Comment se passe le premier contact ?</h3>
-                    <div class="faq-answer">
-                        <p><strong>Simple et sans engagement :</strong></p>
-                        <ol>
-                            <li><strong>Vous me contactez</strong> : 07 67 72 59 80 ou bolatoglu.iann.pro@gmail.com</li>
-                            <li><strong>Audit gratuit</strong> (30 min en visio ou téléphone) : J'analyse rapidement votre situation actuelle</li>
-                            <li><strong>Proposition sur-mesure</strong> : Je vous envoie un devis clair avec recommandations</li>
-                            <li><strong>Vous décidez</strong> : Aucune pression, vous prenez le temps de réfléchir</li>
-                            <li><strong>On démarre</strong> : Si vous validez, on lance le projet sous 48h</li>
-                        </ol>
-                    </div>
+                
+                <div class="legal-info">
+                    <h3>Informations Légales</h3>
+                    <p><strong>Entrepreneur Individuel :</strong> Iann Gabriel Jean-Marie BOLATOĞLU</p>
+                    <p><strong>Nom Commercial :</strong> AVARIO</p>
+                    <p><strong>SIREN :</strong> 100 792 142</p>
+                    <p><strong>SIRET :</strong> 10079214200018</p>
+                    <p><strong>Code APE :</strong> 7311Z - Activités des agences de publicité</p>
+                    <p><strong>Forme juridique :</strong> Entrepreneur individuel</p>
+                    <p><strong>Date de création :</strong> 16 février 2026</p>
+                    <p><strong>Siège social :</strong> 9 Rue du Renard, 76000 Rouen, France</p>
+                    <p><strong>Domiciliataire :</strong> L'USINE (SIREN 827677436)</p>
                 </div>
             </div>
-
-            <div class="faq-cta">
-                <h3>💬 Une autre question ?</h3>
-                <p>Appelez-moi directement : <strong>07 67 72 59 80</strong><br>
-                Ou écrivez-moi : <strong>bolatoglu.iann.pro@gmail.com</strong></p>
-                <p>Je réponds en moins de 24h (souvent bien avant !)</p>
+            
+            <div class="about-image">
+                <img src="https://www.genspark.ai/api/files/s/aUbPaLxT" alt="Logo AVARIO" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 102, 255, 0.3);">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-gradient">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-header">
-                    <h2 class="section-title white">Prêt à booster votre croissance ?</h2>
-                    <div class="contact-offer">
-                        <h3>🚀 OFFRE DE LANCEMENT</h3>
-                        <ul>
-                            <li>✅ <strong>Audit gratuit</strong> de votre présence digitale (valeur 150€)</li>
-                            <li>✅ Bilan complet de vos forces et axes d'amélioration</li>
-                            <li>✅ Plan d'action priorisé avec budget estimé</li>
-                            <li>✅ Aucun engagement, c'est 100% gratuit</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="contact-methods">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope contact-icon"></i>
+    <section id="contact" class="contact">
+        <h2 class="section-title">Prenons <span class="gradient-text">Contact</span></h2>
+        <p class="section-subtitle">Discutons de votre projet et de vos objectifs de croissance</p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
                         <h3>Email</h3>
-                        <a href="mailto:bolatoglu.iann.pro@gmail.com" class="contact-link">
-                            bolatoglu.iann.pro@gmail.com
-                        </a>
+                        <p><a href="mailto:bolatoglu.iann.pro@gmail.com">bolatoglu.iann.pro@gmail.com</a></p>
                     </div>
-
-                    <div class="contact-card">
-                        <i class="fas fa-phone contact-icon"></i>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
                         <h3>Téléphone</h3>
-                        <a href="tel:+33767725980" class="contact-link">
-                            07 67 72 59 80
-                        </a>
-                        <p class="contact-subtitle">(Appel / SMS / WhatsApp)</p>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="fab fa-linkedin contact-icon"></i>
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/iann-bolatoglu/" target="_blank" class="contact-link">
-                            Iann Bolatoglu
-                        </a>
+                        <p><a href="tel:+33767725980">07 67 72 59 80</a></p>
                     </div>
                 </div>
-
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <h4>📍 Zone d'intervention</h4>
-                        <p><strong>Seine-Maritime</strong> : Rouen, Le Havre, Dieppe, Fécamp, Yvetot...</p>
-                        <p><strong>Île-de-France</strong> : Paris, petite couronne, grande couronne</p>
-                        <p><strong>Distanciel</strong> : Partout en France (visio + outils collaboratifs)</p>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <h4>🕐 Horaires</h4>
-                        <p><strong>Disponible du lundi au vendredi</strong> : 9h - 18h</p>
-                        <p><strong>Samedi</strong> : Sur rendez-vous uniquement</p>
-                        <p><strong>Urgences</strong> : WhatsApp 07 67 72 59 80 (réponse sous 2h en semaine)</p>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <h4>⏱️ Réponse garantie</h4>
-                        <p><strong>En moins de 24h</strong> (souvent bien avant !)</p>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Adresse</h3>
+                        <p>9 Rue du Renard<br>76000 Rouen, France<br><em>(Domiciliation : L'USINE)</em></p>
                     </div>
                 </div>
-
-                <div class="contact-cta">
-                    <h3>Réservez votre audit gratuit dès maintenant</h3>
-                    <div class="contact-buttons">
-                        <a href="tel:+33767725980" class="btn-primary btn-large">
-                            <i class="fas fa-phone"></i> Appeler maintenant
-                        </a>
-                        <a href="mailto:bolatoglu.iann.pro@gmail.com" class="btn-secondary btn-large">
-                            <i class="fas fa-envelope"></i> Envoyer un email
-                        </a>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div>
+                        <h3>Site Web</h3>
+                        <p><a href="https://bolatogluiannpro-max.github.io" target="_blank">bolatogluiannpro-max.github.io</a></p>
                     </div>
                 </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h3>Zone d'intervention</h3>
+                        <p>Seine-Maritime (76) & Île-de-France<br>Rouen | Paris 12e</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xbljjvwq" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom & Prénom *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre projet *</label>
+                        <textarea id="message" name="message" required placeholder="Décrivez brièvement votre projet et vos objectifs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Envoyer ma demande</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>🚀 AVARIO</h3>
-                    <p>La stratégie digitale au service de votre croissance</p>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#about">À propos</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#offers">Offres</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#services">SEO/SEA</a></li>
-                            <li><a href="#services">Réseaux Sociaux</a></li>
-                            <li><a href="#services">Data & Automatisation</a></li>
-                            <li><a href="#services">Création de Contenus</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li><a href="tel:+33767725980">07 67 72 59 80</a></li>
-                            <li><a href="mailto:bolatoglu.iann.pro@gmail.com">bolatoglu.iann.pro@gmail.com</a></li>
-                            <li><a href="https://www.linkedin.com/in/iann-bolatoglu/" target="_blank">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="font-size: 2rem; margin-bottom: 1.5rem;">AVARIO</div>
+            <p style="color: var(--gray-medium); max-width: 600px; margin: 0 auto 2rem;">
+                Agence de marketing digital spécialisée en stratégie commerciale, SEO local et e-réputation pour TPE/PME.
+            </p>
+            
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#about">À propos</a>
+                <a href="#contact">Contact</a>
+                <a href="mentions-legales.html" target="_blank">Mentions légales</a>
+                <a href="cgv.html" target="_blank">CGV</a>
+                <a href="politique-confidentialite.html" target="_blank">Politique de confidentialité</a>
             </div>
-
-            <div class="footer-bottom">
-                <p><strong>AVARIO</strong> - La stratégie digitale au service de votre croissance</p>
-                <p>Micro-entreprise enregistrée en France</p>
-                <p>SIRET : <em>10079214200018</em></p>
-                <p class="footer-credits">Fait par Iann Bolatoglu | BTS Communication | Alternance Épicerie Sabah</p>
-                <p class="footer-copyright">© 2026 AVARIO - Tous droits réservés</p>
+            
+            <div class="footer-legal">
+                <p><strong>AVARIO</strong> - Iann Gabriel Jean-Marie BOLATOĞLU, Entrepreneur Individuel</p>
+                <p>SIREN: 100 792 142 | SIRET: 10079214200018 | Code APE: 7311Z</p>
+                <p>9 Rue du Renard, 76000 Rouen, France</p>
+                <p style="margin-top: 1rem;">© 2026 AVARIO. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <script>
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <script src="js/script.js"></script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
